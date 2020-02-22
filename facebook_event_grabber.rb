@@ -1,7 +1,5 @@
 require 'time'
-require 'dotenv'
-Dotenv.load!
-
+require 'dotenv/load' if ENV["RACK_ENV"] != "production"
 require 'koala'
 require 'icalendar'
 
